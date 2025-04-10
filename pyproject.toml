@@ -1,11 +1,12 @@
 [project]
-name = "palworld-mcp"
+name = "lifx-mcp"
 version = "0.0.1"
-description = "MCP Server for Palworld"
+description = "MCP Server for LIFX light control"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "duckdb>=1.2.2",
-    "mcp>=1.6.0",
+    "mcp>=1.6.0", 
     "pydantic>=2.11.3",
+    "lifxlan>=1.2.7",
 ]
