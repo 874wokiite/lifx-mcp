@@ -1,32 +1,32 @@
 # lifx-mcp
 
-LIFXスマート電球をRGB値で制御するMCPサーバー
+MCP server for controlling LIFX smart bulbs via RGB values
 
-## 要件
+## Requirements
 
-- LIFX電球が同じローカルネットワーク上にあること
-- Python 3.12以上
-- ネットワークでUDPポート56700が開放されていること
+- LIFX bulb must be on the same local network
+- Python 3.12 or higher
+- UDP port 56700 must be open on the network
 
-## 機能
+## Features
 
-- RGB値(0-255)に基づいてLIFX電球の色を変更
-- 入力値のバリデーション(0-255の範囲チェック)
-- RGB値をLIFX形式に自動変換
+- Change LIFX bulb color based on RGB values (0-255)
+- Input validation (range check 0-255)
+- Automatic conversion of RGB values to LIFX format
 
-## 使用方法
+## Usage
 
-1. 依存関係をインストール:
+1. Install dependencies:
 ```bash
 uv pip install -e .
 ```
 
-2. MCPサーバーを起動:
+2. Start MCP server:
 ```bash
 uv run src/lifx_mcp/server.py
 ```
 
-3. `control_light_by_rgb`ツールを使用:
+3. Use the `control_light_by_rgb` tool:
 ```json
 {
   "red": 255,
@@ -35,7 +35,7 @@ uv run src/lifx_mcp/server.py
 }
 ```
 
-4. 電球が応答しない場合:
-- 電球の電源を確認
-- 同じネットワークに接続されているか確認
-- ファイアウォール設定を確認
+4. If bulb doesn't respond:
+- Check bulb power
+- Verify it's on the same network
+- Check firewall settings
