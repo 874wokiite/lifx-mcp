@@ -31,7 +31,8 @@ uv run src/lifx_mcp/server.py
 {
   "red": 255,
   "green": 100,
-  "blue": 50
+  "blue": 50,
+  "kelvin": 3500
 }
 ```
 
